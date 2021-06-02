@@ -11,3 +11,10 @@ export const getCurrentProduct = (product) => {
         payload: product
     }
 }
+
+export const searchProduct = (product) => {
+    return {
+        type: "SEARCH_PRODUCT",
+        payload: product  
+    }
+}

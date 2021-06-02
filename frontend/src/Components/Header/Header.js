@@ -2,6 +2,7 @@ import React from 'react'
 import "../../index.css"
 import {Nav, Navbar, NavDropdown, Container, Form,Button, FormControl} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Search from "../Search/Search";
 
 
 const Header = () => {
@@ -27,10 +28,11 @@ const Header = () => {
                                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
-                        <Form inline>
+                        <Search />
+                        {/* <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-light">Search</Button>
-                        </Form>
+                        </Form> */}
                     </Navbar.Collapse>
                 </Navbar>
             </Container>
