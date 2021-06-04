@@ -1,4 +1,3 @@
-// import { Fragment } from "react"
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
@@ -9,6 +8,7 @@ import Contact from "./Components/Contact/Contact";
 import Content from "./Components/Content/Content";
 import About_us from "./Components/About-us/about-us";
 import SinglePage from "./Components/SinglePage/singlePage";
+import Error_404 from "./Components/404_Error/404_Error";
 
 //REDUX store
 import store from "./store";
@@ -33,7 +33,7 @@ class App extends Component {
               <Route path="/contact" exact component={Contact} />
               <Route path="/about-us" exact component={About_us} />
               <Route path="/single-page" exact component={SinglePage} />
-              {/* <Route component={Page404} />                */}
+              <Route component={Error_404} />               
               {/* <Route path="/" exact /> */}
             </Switch> 
           <Footer />
