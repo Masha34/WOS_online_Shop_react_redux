@@ -44,3 +44,26 @@ export const saveData = (product) => {
     });
     return response
   }
+
+
+//   export const updateDatabase = () => {
+//     const data = fetch(URL)  
+//     .then(responce => {
+//       // console.log("update => ", responce)
+//       return responce.json();
+//     // }).catch(err => {
+//     //   return err;
+//     }).then(data => {
+//       // console.log("update ", data);
+//       if (data !== null) {
+//                return data
+//       } else {
+//         return []
+//       }   
+//     })
+//     // .catch(err => console.log(err))
+//     .catch(err => {
+//         return err
+//     })
+//     return data;
+//   }

@@ -36,7 +36,7 @@ const SinglePage = ({ SingleProduct }) => {
                         <p className="">Seller: {seller} </p>
                         <p className="stock">In stock: {stock} pieces <i className="fas fa-cart-plus"></i></p>
                         <div>
-                            <Link to="/" className="table">
+                            <Link to="/edit-product" className="table">
                                 <span className="fa-stack">
                                     <i className="fas fa-edit"></i>
                                 </span>

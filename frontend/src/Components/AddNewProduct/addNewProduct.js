@@ -171,6 +171,7 @@ const mapStateToProps = ({shopReducer}) => {
     return { List }
 }
 const mapDispatchToProps = {
-    addNewShopProduct 
+    addNewShopProduct,
+    saveData
 }
 export default connect(mapStateToProps, mapDispatchToProps)(AddNewProduct);

@@ -2,6 +2,7 @@ const initialState = {
     List: [],
     SingleProduct: "",
     SearchCurrentProduct: ""
+    // CurrentProduct: ""
 
 }
 const shopReducer = (state = initialState, action) => {
@@ -44,6 +45,12 @@ const shopReducer = (state = initialState, action) => {
                     ...state,
                     SearchCurrentProduct: newList
                 }
+            }
+
+        case "EDIT_PRODUCT":
+            return{
+                ...state,         
+                SearchCurrentProduct: action.payload
             }
             
         default:
