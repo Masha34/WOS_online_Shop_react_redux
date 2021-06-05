@@ -18,6 +18,14 @@ const shopReducer = (state = initialState, action) => {
             }
 
 
+        case "ADD_NEW_PRODUCT":
+            return {
+                List: [
+                    ...state.List,
+                    action.payload]
+            }
+
+
         case "SEARCH_PRODUCT":  
             if (action.payload === 0) {
                 return state;

@@ -47,7 +47,6 @@ exports.getSingleProduct = catchErrors(async (req, res, next) => {
     })
 })
 
-
 exports.addProduct = catchErrors(async(req, res, next) => {
     const products = await Product.insertMany(
         {
@@ -66,13 +65,44 @@ exports.addProduct = catchErrors(async(req, res, next) => {
             "numOfReviews": 90,
             "reviews": []
         }
-    )  
+    )   
     res.status(200).json({
         success: true,
         message: "addProduct",
         products
     })
 })
+// exports.addProduct = catchErrors(async(req, res, next) => {
+//     const products = await Product.insertMany(
+//         {
+//             "name": "",
+//             "price": "",
+//             "descriptions": "",
+//             "images": [
+//                 {
+//                     "product_id": "products/g2030405",
+//                     "url": ""
+//                 }
+//             ],
+//             "category": "",
+//             "seller": "",
+//             "stock": "",
+//         }
+//     )   
+//     res.status(200).json({
+//         success: true,
+//         message: "addProduct",
+//         products
+//     })
+// })
+// exports.addProduct = catchErrors(async(req, res, next) => {
+//     const products = await Product.insertOne()    //  !!!!!!!!!!!!!!!!
+//     res.status(200).json({
+//         success: true,
+//         message: "addProduct",
+//         products
+//     })
+// })
 
 exports.deleteProduct = catchErrors(async(req, res, next) => {
     const idDeleteProduct = req.params.id;

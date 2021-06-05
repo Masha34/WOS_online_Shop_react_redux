@@ -18,3 +18,10 @@ export const searchProduct = (product) => {
         payload: product  
     }
 }
+
+export const addNewShopProduct = (product) => {
+    return {
+        type: "ADD_NEW_PRODUCT",
+        payload: product  
+    }
+}

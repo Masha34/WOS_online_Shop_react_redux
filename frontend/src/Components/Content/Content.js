@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import "./Content.css";
 import ContentItem from "./ContentItem/ContentItem";
 import { getAllProducts } from "../../Services/api-service";
@@ -31,11 +32,14 @@ import { getAllProd } from "../../Actions/shopActions";
             <div className="container">
                 <div className="row">
                     <div className="col-12 product_area">
+                            <button>
+                                <Link to="/add-product" className="add-btn" aria-current="page">Add new Product</Link>
+                            </button>
                         <div className="product_block">
-                                {/* {item.length > 0 ? item: <h2>List is empty</h2>}  */}
+                                {item.length > 0 ? item: <h2>List is empty</h2>} 
                                     {/* якщо розкоментувати то не працює Search */}
 
-                                {SearchCurrentProduct.length === 0 ? List.map(products => {
+                                {/* {SearchCurrentProduct.length === 0 ? List.map(products => {
                                     return (
                                         <ContentItem key={products._id}  {...products} />
                                     )
@@ -44,7 +48,7 @@ import { getAllProd } from "../../Actions/shopActions";
                                     return (
                                         <ContentItem key={products._id}  {...products} />
                                     )
-                                }) } 
+                                }) }  */}
 
                         </div>
                     </div>
