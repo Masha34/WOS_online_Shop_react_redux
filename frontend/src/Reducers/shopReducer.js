@@ -47,12 +47,6 @@ const shopReducer = (state = initialState, action) => {
                 }
             }
 
-        case "EDIT_PRODUCT":
-            return{
-                ...state,         
-                SearchCurrentProduct: action.payload
-            }
-            
         default:
             return state;
     }

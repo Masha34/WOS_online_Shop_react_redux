@@ -7,6 +7,7 @@ import { Form, Button, FormControl} from 'react-bootstrap';
 const Search = ({ searchProduct }) => {
     
     const onSearch = (event) => {
+        console.log("rrrrr", event.target.value )
         searchProduct(event.target.value)
     }
 

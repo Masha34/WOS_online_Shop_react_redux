@@ -25,11 +25,3 @@ export const addNewShopProduct = (product) => {
         payload: product  
     }
 }
-
-
-export const editOneProduct = (CurrentProduct) => {
-    return {
-        type: "EDIT_PRODUCT", 
-        payload: CurrentProduct 
-    }
-}

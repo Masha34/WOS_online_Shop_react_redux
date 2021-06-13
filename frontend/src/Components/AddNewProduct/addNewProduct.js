@@ -2,20 +2,20 @@ import React, { Fragment} from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import "./addNewProduct.css";
-import { v4 as uuidv4 } from 'uuid';
-import { saveData } from "../../Services/api-service";
+// import { v4 as uuidv4 } from 'uuid';
+import { addNewOneProduct } from "../../Services/api-service";
 import { addNewShopProduct  } from "../../Actions/shopActions";
 
 class AddNewProduct extends React.Component {
 
     state = {
             "name": "",
-            "price": "",
+            "price": 0,
             "descriptions": "",
             "images": "",
             "category": "",
             "seller": "",
-            "stock": "",
+            "stock": 0,
             // "salePrice": "",
             // "numOfReviews": "",
             // "numOfPurchase": "",
@@ -58,20 +58,22 @@ class AddNewProduct extends React.Component {
             stock: event.target.value
         })
     }
-
+    
     addProduct = (event) =>{
         event.preventDefault();
         const { name, price, descriptions, images, category, seller, stock } = this.state;
-        const _id = uuidv4();
-        const newItem = { _id, name, price, descriptions, images, category, seller, stock };
-        const { List, addNewShopProduct } = this.props;
-        addNewShopProduct(newItem);
-        List.push(newItem);
-        saveData(List).then(() => {
-            this.setState({
-                isRedirect: true
-            })
-        })
+        // const _id = uuidv4();
+        const newItem = { name, price, descriptions, images, category, seller, stock };
+        console.log("new", newItem)
+        const { addNewShopProduct } = this.props;
+        addNewOneProduct(newItem);
+
+        // List.push(newItem);
+        // saveData(List).then(() => {
+        //     this.setState({
+        //         isRedirect: true
+        //     })
+        // })
     }
 
     
@@ -172,6 +174,6 @@ const mapStateToProps = ({shopReducer}) => {
 }
 const mapDispatchToProps = {
     addNewShopProduct,
-    saveData
+
 }
 export default connect(mapStateToProps, mapDispatchToProps)(AddNewProduct);
