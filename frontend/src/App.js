@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 // Import components 
 import Header from "./Components/Header/Header";
@@ -9,6 +9,7 @@ import Content from "./Components/Content/Content";
 import About_us from "./Components/About-us/about-us";
 import SinglePage from "./Components/SinglePage/singlePage";
 import AddNewProduct from "./Components/AddNewProduct/addNewProduct";
+import EditProduct from "./Components/EditProduct/editProduct";
 import Error_404 from "./Components/404_Error/404_Error";
 
 //REDUX store
@@ -35,6 +36,7 @@ class App extends Component {
               <Route path="/about-us" exact component={About_us} />
               <Route path="/single-page" exact component={SinglePage} />
               <Route path="/add-product" exact component={AddNewProduct} />
+              <Route path="/edit-product" exact component={EditProduct} />
               <Route component={Error_404} />               
               {/* <Route path="/" exact /> */}
             </Switch> 

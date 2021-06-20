@@ -48,3 +48,46 @@ export const addNewOneProduct = (product) => {
     });
     return response
   }
+
+
+  // Edit product
+export const editProduct = (Id) => {
+  console.log("product ", Id)
+const response = fetch(`http://localhost:4000/api/v1/edit-product/${Id}`, {
+  method: "PUT",
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(Id), 
+}).then(response => {
+    console.log("inside fetch", response)
+  return response;
+  // console.log("saveDate responce =>", response);
+}).catch(err => {
+    console.log("catch", err);
+  return err;
+});
+return response
+}
+
+//   export const updateDatabase = () => {
+//     const data = fetch(URL)  
+//     .then(responce => {
+//       // console.log("update => ", responce)
+//       return responce.json();
+//     // }).catch(err => {
+//     //   return err;
+//     }).then(data => {
+//       // console.log("update ", data);
+//       if (data !== null) {
+//                return data
+//       } else {
+//         return []
+//       }   
+//     })
+//     // .catch(err => console.log(err))
+//     .catch(err => {
+//         return err
+//     })
+//     return data;
+//   }

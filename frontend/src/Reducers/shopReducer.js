@@ -2,7 +2,7 @@ const initialState = {
     List: [],
     SingleProduct: "",
     SearchCurrentProduct: ""
-    // CurrentProduct: ""
+    // lookingProduct: ""
 
 }
 const shopReducer = (state = initialState, action) => {
@@ -10,7 +10,8 @@ const shopReducer = (state = initialState, action) => {
         case "ALL_PRODUCTS_LOADED":
             return {
                 ...state,
-                List: action.payload
+                List: action.payload,
+                // lookingProduct: action.payload
             }
         case "GET_CURRENT_PRODUCT":
             return {
@@ -47,6 +48,14 @@ const shopReducer = (state = initialState, action) => {
                 }
             }
 
+        case "EDIT_PRODUCT":
+            return{
+                ...state,   
+                SingleProduct: action.payload,      
+                // List: action.payload,      
+                // lookingProduct: action.payload
+            }
+            
         default:
             return state;
     }

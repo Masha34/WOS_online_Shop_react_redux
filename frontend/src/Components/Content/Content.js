@@ -36,11 +36,11 @@ import { getAllProd } from "../../Actions/shopActions";
                                 <Link to="/add-product" className="add-btn" aria-current="page">Add new Product</Link>
                             </button>
                         <div className="product_block">
-                                {/* {item.length > 0 ? item: <h2>List is empty</h2>}  */}
+                                {item.length > 0 ? item: <h2>List is empty</h2>} 
                                     {/* якщо розкоментувати то не працює Search */}
 
 
-                                {SearchCurrentProduct.length === 0 ? List.map(products => {
+                                {/* {SearchCurrentProduct.length === 0 ? List.map(products => {
                                     return (
                                         <ContentItem key={products._id}  {...products} />
                                     )
@@ -49,7 +49,7 @@ import { getAllProd } from "../../Actions/shopActions";
                                     return (
                                         <ContentItem key={products._id}  {...products} />
                                     )
-                                }) } 
+                                }) }  */}
 
                         </div>
                     </div>

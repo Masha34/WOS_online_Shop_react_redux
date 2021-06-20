@@ -2,7 +2,6 @@ import React, { Fragment} from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import "./addNewProduct.css";
-// import { v4 as uuidv4 } from 'uuid';
 import { addNewOneProduct } from "../../Services/api-service";
 import { addNewShopProduct  } from "../../Actions/shopActions";
 
@@ -16,9 +15,6 @@ class AddNewProduct extends React.Component {
             "category": "",
             "seller": "",
             "stock": 0,
-            // "salePrice": "",
-            // "numOfReviews": "",
-            // "numOfPurchase": "",
             "isRedirect": false
 
     }
@@ -62,7 +58,6 @@ class AddNewProduct extends React.Component {
     addProduct = (event) =>{
         event.preventDefault();
         const { name, price, descriptions, images, category, seller, stock } = this.state;
-        // const _id = uuidv4();
         const newItem = { name, price, descriptions, images, category, seller, stock };
         console.log("new", newItem)
         const { addNewShopProduct } = this.props;
